@@ -42,7 +42,7 @@ router.route('/update/:id').post((req, res) => {
     .then(exercise => {
       exercise.SchoolName = req.body.SchoolName;
       exercise.SchoolID = req.body.SchoolID;
-      exercise.AdminEmail = Number(req.body.AdminEmail);
+      exercise.AdminEmail = req.body.AdminEmail;
       exercise.date = Date.parse(req.body.date);
 
       exercise.save()
